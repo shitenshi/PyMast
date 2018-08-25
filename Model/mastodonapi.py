@@ -24,13 +24,6 @@ mstdn = Mastodon(
 class MstdnStreamListener(StreamListener):
     def on_update(self, status):
         print(status['content'])
-    def on_notification(self, notification):
-        print("")
-    def on_delete(self, status_id):
-        print("")
-        
-    def handle_heartbeat(self):
-        print("")
 mstdn.stream_user(MstdnStreamListener())
 
 
